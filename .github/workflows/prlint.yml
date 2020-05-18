@@ -8,9 +8,9 @@ jobs:
   pr-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: morrisoncole/pr-lint-action@v1.1.1
+      - uses: cultivateai/pr-lint-action@master
         with:
-          title-regex: "foo"
+          body-regex: "app.asana.com\/\d+\/\d+\/\d+"
           on-failed-regex-comment:
-            "Your PR title must contain the word foo"
+            "Please include a link to the asana task for this PR"
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
