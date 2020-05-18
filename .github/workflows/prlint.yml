@@ -11,6 +11,6 @@ jobs:
       - uses: cultivateai/pr-lint-action@master
         with:
           body-regex: 'app.asana.com\/\d+\/\d+\/\d+'
-          on-failed-regex-comment:
+          on-failed-body-comment:
             "Please include a link to the asana task for this PR"
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
