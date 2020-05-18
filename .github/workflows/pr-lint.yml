@@ -8,7 +8,7 @@ jobs:
   pr-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: cultivateai/pr-lint-action@master
+      - uses: cultivateai/pr-lint-action@57331d4
         with:
           body-regex: 'app.asana.com\/\d+\/\d+\/\d+'
           on-failed-body-comment:
