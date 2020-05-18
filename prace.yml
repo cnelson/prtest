@@ -1,5 +1,0 @@
-version: 1
-body:
-  patterns:
-    - ':\/\/app.asana.com\/\d+\/\d+\/\d+'
-  error: Please include a link to an asana task for this PR
