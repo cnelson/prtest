@@ -1,0 +1,16 @@
+name: PR Lint
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  pr-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cultivateai/pr-lint-action@master
+        with:
+          body-regex: 'app.asana.com\/\d+\/\d+\/\d+'
+          on-failed-body-comment:
+            "Please include a link to the asana task for this PR"
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
